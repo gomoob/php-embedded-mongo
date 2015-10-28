@@ -1,6 +1,6 @@
 {
   "name": "gomoob-php-embedded-mongo",
-  "version": "0.0.1",
+  "version": "0.0.1-alpha1",
   "license": "MIT",
   "repository" : {
     "type" : "git",

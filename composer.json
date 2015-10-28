@@ -1,7 +1,7 @@
 {
 	"name" : "gomoob/php-embedded-mongo",
 	"description" : "Start an embedded Mongo DB server and run your PHPUnit integration tests easily.",
-	"version" : "0.0.1",
+	"version" : "0.0.1-alpha1",
 	"license" : "MIT",
 	"type" : "library",
 	"keywords" : [
