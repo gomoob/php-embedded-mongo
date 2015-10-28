@@ -50,3 +50,8 @@ Here are important things to know about the behavior of the server :
  * Port `27017` is used by the Mongo DB process (remember the library uses a real Mongo server) ; 
  * Port `4309` allows to send commands to a Java process which drives the Mongo DB process ; 
  * Log outputs location is not configurable, it default to `output.log`.
+
+## Release history
+
+## 0.0.1-alpha1 (2015-10-28)
+ * First alpha version.
