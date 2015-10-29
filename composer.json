@@ -34,7 +34,9 @@
 		}
 	},
 	"require" : {
-		"php" : ">=5.3.3"
+		"php" : ">=5.3.3",
+		"monolog/monolog" : "~1.17", 
+		"psr/log" : "~1.0"
 	},
 	"require-dev" : {
 		"codeclimate/php-test-reporter" : "~0.2",

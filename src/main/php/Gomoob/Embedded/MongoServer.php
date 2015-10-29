@@ -36,6 +36,9 @@ class MongoServer
 	{
 		$os = $this->getOS();
 		
+		// TODO: Voir s'il y a un moyen de tester si Java est installé (apparemment il y a un log que l'on pourrait 
+		//       parser dans le fichier de log) et retourner un message très clair.
+		//       Voir également http://stackoverflow.com/questions/12424787/how-to-check-if-a-shell-command-exists-from-php
 		$command = 'java -classpath ' . $this->createJavaClassPath();
 		$command .= ' com.gomoob.embedded.EmbeddedMongo --mongo-port=27017 --socket-port=4309';
 
