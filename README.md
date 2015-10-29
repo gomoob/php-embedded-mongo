@@ -53,5 +53,8 @@ Here are important things to know about the behavior of the server :
 
 ## Release history
 
+## 0.0.1-alpha2 (2015-10-29)
+ * First very basic UNIX support.
+
 ## 0.0.1-alpha1 (2015-10-28)
  * First alpha version.
