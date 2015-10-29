@@ -35,6 +35,9 @@ class MongoServer
 	public function start()
 	{
 		$os = $this->getOS();
+		
+		$command = 'java -classpath ' . $this->createJavaClassPath();
+		$command .= ' com.gomoob.embedded.EmbeddedMongo --mongo-port=27017 --socket-port=4309';
 
 		if($os === 'WINDOWS') {
 
@@ -44,16 +47,13 @@ class MongoServer
 
 			}
 
-			$command = 'java -classpath ' . $this->createJavaClassPath();
-			$command .= ' com.gomoob.embedded.EmbeddedMongo --mongo-port=27017 --socket-port=4309';
-
 			$WshShell = new \COM("WScript.Shell");
 			$oExec = $WshShell->Run("CMD /C " . $command . " 1> output.log 2>&1", 0, false);
 			echo $oExec;
 
 		} else if($os === 'UNIX') {
 
-			$this->pid = (int)shell_exec(sprintf('%s > %s 2>&1 & echo $!', $this->command, $outputFile));
+			$this->pid = (int)shell_exec(sprintf('%s > %s 2>&1 & echo $!', $command, 'output.log'));
 
 		}
 
